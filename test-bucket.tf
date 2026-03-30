@@ -2,11 +2,13 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 5.0" # Use latest version if possible
+      version = "~> 5.0"
     }
+  }
+}
 
 provider "aws" {
-  region  = "us-east-1"
+  region = "us-east-1"
 }
 
 resource "aws_s3_bucket" "frontend" {
@@ -14,7 +16,8 @@ resource "aws_s3_bucket" "frontend" {
   force_destroy = true
 
   tags = {
-    Name = "My Graded Bucket" 
+    Name = "My Graded Bucket"
   }
 }
-// Final Webhook Trigger v10 - Script Synced.
+
+// Final Webhook Trigger v11 - Syntax Fixed
