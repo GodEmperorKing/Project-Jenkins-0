@@ -8,7 +8,7 @@ terraform {
     }
     
     provider "aws" {
-      region  = "us-east-1"
+      region = "us-east-1"
     }
     
     resource "aws_s3_bucket" "frontend" {
@@ -16,8 +16,9 @@ terraform {
       force_destroy = true
     
       tags = {
-        Name = "My Graded Bucket" 
+        Name = "My Graded Bucket"
       }
     }
-
-// Triggering build #17 for GitHub push verificationnal push for grading
+    
+    // Final push for grading
+    // Triggering build #17 for GitHub push verification
