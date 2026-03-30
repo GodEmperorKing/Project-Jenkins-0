@@ -18,7 +18,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "frontend" {
-  bucket_prefix = "jenkins-bucket-"
+  bucket_prefix = "jenkins-webhook-test-"
   force_destroy = true
 
   tags = {
