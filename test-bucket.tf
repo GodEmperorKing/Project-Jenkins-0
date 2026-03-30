@@ -25,4 +25,4 @@ resource "aws_s3_bucket" "frontend" {
     Name = "My Graded Bucket" 
   }
 }
-// Triggering Build #18 - Verifying GitHub Webhook Push' at the very bottom
+// Triggering Build #18 - Verifying GitHub Webhook Push' at the very bottom.
