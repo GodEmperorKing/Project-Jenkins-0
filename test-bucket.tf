@@ -25,4 +25,4 @@ resource "aws_s3_bucket" "frontend" {
     Name = "My Graded Bucket" 
   }
 }
-// Final Webhook Trigger v9 - Dual Credential Fix.
+// Final Webhook Trigger v10 - Script Synced.
