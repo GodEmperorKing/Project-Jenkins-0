@@ -1,24 +1,2 @@
-terraform {
-      required_providers {
-        aws = {
-          source  = "hashicorp/aws"
-          version = "~> 5.0"
-        }
-      }
-    }
-    
-    provider "aws" {
-      region = "us-east-1"
-    }
-    
-    resource "aws_s3_bucket" "frontend" {
-      bucket_prefix = "jenkins-bucket-"
-      force_destroy = true
-    
-      tags = {
-        Name = "My Graded Bucket"
-      }
-    }
-    
-    // Final push for grading
-    // Triggering build #17 for GitHub push verification
+
+// Triggering Build #18 - Verifying GitHub Webhook Push
