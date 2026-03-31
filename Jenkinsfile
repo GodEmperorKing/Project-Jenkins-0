@@ -15,5 +15,3 @@ pipeline {
                 sh 'terraform apply -reconfigure -auto-approve'
             }
         }
-     
-
