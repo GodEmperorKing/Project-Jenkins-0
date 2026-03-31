@@ -8,6 +8,8 @@ pipeline {                             // 1. Opens the whole Pipeline
     stages {                           // 3. Opens the Stages list
         stage('Terraform Init') {      // 4. Opens Init Stage
             steps {                    // 5. Opens Init Steps
+                // This line wipes the old "mempry"
+                sh 'rm -rf .terraform'
                 sh 'terraform init -reconfigure'
             }                          // 5. Closes Init Steps
         }                              // 4. Closes Init Stage
