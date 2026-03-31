@@ -15,5 +15,5 @@ pipeline {
                 sh 'terraform apply -reconfigure -auto-approve'
             }
         }
-    } // This closes 'stages'
-} // This closes 'pipeline'
+    } 
+} 
