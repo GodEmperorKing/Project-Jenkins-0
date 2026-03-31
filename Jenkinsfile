@@ -12,7 +12,8 @@ pipeline {
         }
         stage('Terraform Apply') {
             steps {
-                // Add the -reconfigure flag here too!
                 sh 'terraform apply -reconfigure -auto-approve'
             }
         }
+    } // This closes 'stages'
+} // This closes 'pipeline'
