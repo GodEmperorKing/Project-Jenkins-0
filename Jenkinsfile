@@ -14,7 +14,7 @@ pipeline {                             // 1. Opens the whole Pipeline
 
         stage('Terraform Apply') {     // 6. Opens Apply Stage
             steps {                    // 7. Opens Apply Steps
-                sh 'terraform apply -auto-approve'
+                sh 'terraform apply -reconfigure -auto-approve'
             }                          // 7. Closes Apply Steps
         }                              // 6. Closes Apply Stage
     }                                  // 3. Closes the Stages list
