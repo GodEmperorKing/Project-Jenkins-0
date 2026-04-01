@@ -11,7 +11,7 @@ resource "aws_s3_bucket" "my_project_bucket" {
 resource "aws_s3_object" "screenshots" {
   for_each = fileset("${path.module}/", "*.{png,webp,txt}")
   
-  bucket = aws_s3_bucket.portfolio_bucket.id
+  bucket = aws_s3_bucket.my_project_bucket.id
   key    = each.value
   source = "${path.module}/${each.value}"
   acl    = "public-read" # This makes them public automatically!
