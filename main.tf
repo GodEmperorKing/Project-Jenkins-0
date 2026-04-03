@@ -9,7 +9,7 @@ resource "aws_s3_bucket" "my_project_bucket" {
 }
 
 resource "aws_s3_object" "screenshots" {
-  for_each = fileset("${path.module}/", "*.{png,webp,txt}")
+  for_each = fileset("${path.module}/", "*.{png,webp,txt,md}")
   
   bucket = aws_s3_bucket.my_project_bucket.id
   key    = each.value
