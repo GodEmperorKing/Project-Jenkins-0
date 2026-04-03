@@ -10,11 +10,12 @@ resource "aws_s3_bucket" "my_project_bucket" {
 
 resource "aws_s3_object" "screenshots" {
   for_each = fileset("${path.module}/", "*.{png,webp,txt,md}")
-  
-  bucket = aws_s3_bucket.my_project_bucket.id
-  key    = each.value
-  source = "${path.module}/${each.value}"
- }
+
+  bucket       = aws_s3_bucket.my_project_bucket.id
+  key          = each.value
+  source       = "${path.module}/${each.value}"
+  content_type = "image/png" # <--- Add this right here!
+}
 
 # 1. Turn off the "Block Public Access" safety switch
 resource "aws_s3_bucket_public_access_block" "example" {
