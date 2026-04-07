@@ -16,3 +16,21 @@ This project demonstrates a fully automated Continuous Integration and Continuou
 * **Secure Authentication:** Bypassed hardcoded AWS access keys by utilizing native EC2 IAM Instance Profiles for secure, role-based AWS authentication.
 
 ---
+
+## 📦 Project Deliverables
+
+### 1. Webhook Trigger
+*(Proof of automated pipeline trigger via GitHub push)*
+![Webhook Trigger](webhook-trigger.png)
+
+### 2. Terraform Deployment
+*(Jenkins console output showing successful plan and apply)*
+![TF Deployment](tf-deployment.png)
+
+### 3. S3 Bucket Provisioned
+*(Verified AWS S3 bucket with uploaded metadata-corrected objects)*
+![S3 Bucket](s3-bucket.png)
+
+### 4. Professor Greenlight
+*(Approval for the refactored architecture)*
+![Greenlight](t.i.q.s-greenlight-approval.png.webp)
