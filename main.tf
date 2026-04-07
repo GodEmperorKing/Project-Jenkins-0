@@ -10,11 +10,21 @@ resource "aws_s3_bucket" "my_project_bucket" {
 
 resource "aws_s3_object" "screenshots" {
   for_each = fileset("${path.module}/", "*.{png,webp,txt,md}")
-
+  
   bucket       = aws_s3_bucket.my_project_bucket.id
   key          = each.value
   source       = "${path.module}/${each.value}"
-  content_type = "image/png" # 
+  
+  # Tracks file changes so Terraform updates S3 when you change a file
+  etag         = filemd5("${path.module}/${each.value}") 
+  
+  # Dynamically assigns the right metadata based on the file extension
+  content_type = lookup({
+    "png"  = "image/png"
+    "webp" = "image/webp"
+    "txt"  = "text/plain"
+    "md"   = "text/markdown"
+  }, split(".", each.value)[length(split(".", each.value)) - 1], "application/octet-stream")
 }
 
 # 1. Turn off the "Block Public Access" safety switch
