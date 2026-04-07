@@ -2,6 +2,7 @@ pipeline {
     agent any
     environment {
         AWS_DEFAULT_REGION = 'us-east-1'
+        TF_IN_AUTOMATION   = 'true'
     }
     stages {
         stage('Checkout') {
@@ -14,10 +15,17 @@ pipeline {
                 sh 'terraform init -reconfigure'
             }
         }
+        stage('Terraform Plan') {
+            steps {
+                // Generates the blueprint and saves it as 'tfplan'
+                sh 'terraform plan -out=tfplan'
+            }
+        }
         stage('Terraform Apply') {
             steps {
+                // Applies ONLY the exact plan generated in the previous step
                 // -parallelism=1 keeps the t3.micro from freezing!
-                sh 'terraform apply -auto-approve -parallelism=1'
+                sh 'terraform apply -parallelism=1 tfplan'
             }
         }
     }
