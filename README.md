@@ -20,10 +20,3 @@
 ![Terraform Deployment in Jenkins](tf-deployment.png)
 ![Manual Approval Gate](t.i.q.s-greenlight-approval.png.webp)
 ![Jenkins Console Output Artifact](jenkins-output-console.png)
-
-
-    
-    ## 🏁 Key Accomplishments
-    1. **Webhook Integration:** Successful automated trigger from local development (ASUS Z13) to AWS.
-    2. **State Management:** Managed S3 bucket creation and policy application via Terraform.
-    3. **Clean Teardown:** Automated destruction of resources via a manual approval gate to optimize cloud costs.
