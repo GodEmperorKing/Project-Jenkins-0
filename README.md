@@ -19,7 +19,8 @@
 ![GitHub Webhook Trigger](webhook-trigger.png)
 ![Terraform Deployment in Jenkins](tf-deployment.png)
 ![Manual Approval Gate](t.i.q.s-greenlight-approval.png.webp)
-![Jenkins Console Output Artifact](jenkins-output-console.png) 
+![Jenkins Console Output Artifact](jenkins-output-console.png)
+
     
     ## 🏁 Key Accomplishments
     1. **Webhook Integration:** Successful automated trigger from local development (ASUS Z13) to AWS.
