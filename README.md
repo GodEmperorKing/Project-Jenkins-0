@@ -15,11 +15,12 @@
     * **Validation Stage:** A custom Groovy validation stage was injected into the pipeline to verify the trigger source and user identity before execution.
     
     ## 📊 Project Deliverables
-![Jenkins Console Output Artifact](![S3 Bucket Created](s3-bucket.png)
+![S3 Bucket Created](s3-bucket.png)
 ![GitHub Webhook Trigger](webhook-trigger.png)
 ![Terraform Deployment in Jenkins](tf-deployment.png)
 ![Manual Approval Gate](t.i.q.s-greenlight-approval.png.webp)
 ![Jenkins Console Output Artifact](jenkins-output-console.png)
+
 
     
     ## 🏁 Key Accomplishments
